@@ -11,12 +11,12 @@ $DarkBlue: hsl(223, 47%, 23%);
   margin: 0;
   box-sizing: border-box;
   text-align: center;
-  font-family: "Red Hat Display!important" , sans-serif;
+  font-family: "Red Hat Display!important", sans-serif;
   font-size: 14px;
 }
 
 .bg {
-  background: url("../images/pattern-background-mobile.svg");
+  background: url("./images/pattern-background-mobile.svg");
   height: 100vh;
   width: 100vw;
   background-repeat: no-repeat;
@@ -26,10 +26,10 @@ $DarkBlue: hsl(223, 47%, 23%);
   justify-content: center;
   background-size: contain;
 
-  @media only screen and (min-width : 376px) {
-    background: url("../images/pattern-background-desktop.svg");
-    background-repeat: no-repeat;  
-    height: 100vh;  
+  @media only screen and (min-width: 376px) {
+    background: url("./images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    height: 100vh;
     background-color: $veryPaleBlue;
     background-size: contain;
   }
@@ -48,7 +48,7 @@ $DarkBlue: hsl(223, 47%, 23%);
       display: flex;
       flex-direction: column;
       text-align: center;
-      
+
       align-items: center;
       h3 {
         all: unset;
@@ -65,7 +65,7 @@ $DarkBlue: hsl(223, 47%, 23%);
     }
 
     .subscription {
-      margin: 15px;
+      margin: auto;
       background: $veryPaleBlue;
       max-width: 320px;
       min-height: 98px;
@@ -77,58 +77,53 @@ $DarkBlue: hsl(223, 47%, 23%);
       padding: 0 20px;
       flex-wrap: wrap;
 
-    
-    .subscriptionLeft {
-      display: flex;
-      gap: 20px;
-      justify-content: space-between;
-      align-items: center;
+      .subscriptionLeft {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
 
-      @media only screen and (max-width : 310px){
+        @media only screen and (max-width: 310px) {
+          // margin: auto;
+          padding-top: 15px;
+        }
+
+        div {
+          h6 {
+            color: $DarkBlue;
+            font-weight: 700;
+          }
+          p {
+            color: $DesaturatedBlue;
+          }
+        }
+      }
+      .subscriptionRight {
+        list-style: none;
+        color: $DarkBlue;
         margin: auto;
-        padding-top: 15px;
-      }
 
-      div{
-        h6{
-          color: $DarkBlue;
-          font-weight: 700;
-        }
-        p{
-          color: $DesaturatedBlue;
+        @media only screen and (max-width: 310px) {
+          padding-bottom: 15px;
         }
       }
-
     }
-    .subscriptionRight {
-      list-style: none;
-      color: $DarkBlue;
-      margin: auto;
-
-      @media only screen and (max-width : 310px){
-        padding-bottom: 15px;
-      }
-
-    }
-    
-  }
     .bottomBtn {
       margin: 20px auto;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       max-width: 320px;
-      margin: 15px;
       .btn1 {
         all: unset;
         font-weight: 500;
-
         font-weight: 700;
         padding: 10px 0;
         background: $brigtblue;
         border-radius: 10px;
         color: white;
         cursor: pointer;
-        &:hover{
+        &:hover {
           background-color: $DarkBlue;
         }
       }
@@ -138,7 +133,7 @@ $DarkBlue: hsl(223, 47%, 23%);
         margin-top: 20px;
         color: $DesaturatedBlue;
         cursor: pointer;
-        &:hover{
+        &:hover {
           color: $DarkBlue;
         }
       }
